@@ -62,11 +62,11 @@
   ],
   "cartData": [
     {
-      "id": 2,
-      "name": "Milan",
-      "picture": "https://utopiaurbana.city/wp-content/uploads/2022/02/qpx-143261111_7c33b173-770x515.jpg",
-      "price": 1500,
-      "amount": 1
+      "id": 3,
+      "name": "Madrid",
+      "picture": "https://estaticos.esmadrid.com/cdn/farfuture/cWEgd6nsFZn5_x7RaedKMR9rkPA7ZC3zVuc90k6gXwA/mtime:1646729215/sites/default/files/styles/content_type_full/public/editorial/estaciones.jpg?itok=8J6mUZg3",
+      "price": 2100,
+      "amount": 2
     }
   ]
 }
