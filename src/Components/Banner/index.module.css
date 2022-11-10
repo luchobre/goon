@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Poppins&family=Poppins:wght@500&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-white: #ffffff;
+    --color-frenchMauve: #d080e1;
+    --color-iceberg: #71a2cb;
+    /* --color-iceberg-bg: rgba(113, 162, 202, 0.7); */
+    --color-lapisLazuli: #276098;
+    --font-primary: "Poppins", sans-serif;
+    --background-img: "./images/card_002_total.jpg";
+    font-size: 18px;
+    --background-image-iceberg-bg: linear-gradient(
+        to right top,
+        #ffffff,
+        #ebebf5,
+        #d4d9eb,
+        #bbc7e2,
+        #9eb7d8,
+        #8aaacf,
+        #759dc7,
+        #5e91be,
+        #5085b5,
+        #4378ab,
+        #356ca2,
+        #276098
+    );
+}
+
+/* ******RESET*****
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+    -webkit-user-select: auto;
+    user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    line-break: auto;
+    -webkit-user-select: auto;
+    user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Estilos de Banner*/ 
+
+h2 , h3{
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    margin-left: 1.5rem;
+}
+
+h2 {
+    text-decoration: none;
+}
+
+.bannerButton {
+    background: #276098;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    padding: 15px;
+}
+
+.bannerButton:hover {
+    filter: drop-shadow(0px 0px 5px black);
+    background-color: #71a2ca;
+}
+
+.containerBanner{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-image: url('./images/background.jpg');
+    /* border-radius: 20px;    */
+    -webkit-box-shadow: 14px 15px 35px 1px rgba(0,0,0,0.44);
+    -moz-box-shadow: 14px 15px 35px 1px rgba(0,0,0,0.44);
+    box-shadow: 14px 15px 35px 1px rgba(0,0,0,0.44);
+    height: 600px;
+}
+
+.textBanner{
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilos del carrusel */
+
+.loadedImages {
+    height: 30rem;
+    width: 60rem;
+}
+.loadedImages2 {
+    height: 30rem;
+    width: 60rem;
+}
+
+@media screen and (max-width: 580px) {
+    :root {
+        font-size: 14px;
+    }  
+    .containerBanner{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+    }
+    .bannerOffer{
+        /* width: 80%; */
+        height: 9rem;
+        justify-content: center;
+        border-radius: 1rem 1rem 0 0;
+        align-items: center;
+        margin: 0;
+    }
+    .bannerImgInt{
+        /* height: 5rem; */
+        width: 100%;
+        align-items: center;
+    }
+}
+

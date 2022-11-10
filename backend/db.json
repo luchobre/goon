@@ -1,0 +1,72 @@
+{
+  "cardsData": [
+    {
+      "icon": "./images/tele.png",
+      "title": "Discover new flavours & people",
+      "text": "Discover new tastes, flavours, snacks and recipes to make wonderful meals. Also find out where your food comes from and who makes it."
+    },
+    {
+      "icon": "./images/wholesale.png",
+      "title": "Buy wholesale",
+      "text": "We offer bulk formats, variety cases, and discovery boxes so you can save money on delicious foods by buying at wholesale prices.  "
+    },
+    {
+      "icon": "./images/support.png",
+      "title": "Support your community",
+      "text": "By buying in bulk from local and Canadian producers you are helping grow our local food ecosystem, creating jobs, and supporting families and entrepreneurs in your community."
+    },
+    {
+      "icon": "./images/winner.png",
+      "title": "Enjoy the best quality",
+      "text": "We only offer great tasting, all natural foods that are better for you, and organic if possible."
+    },
+    {
+      "icon": "./images/heart.png",
+      "title": "Enjoy Club Level Service",
+      "text": "As a member of our club, we will make sure you are delighted with our service or we will make it right!"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "picture": "https://www.exoticca.com/es/blog/wp-content/uploads/2020/01/exoticca-mejor-epoca-para-viajar-a-suiza.jpg",
+      "name": "Suiza",
+      "lastPrice": 2000,
+      "newPrice": 2400,
+      "description": "Contratalo al menor precio!"
+    },
+    {
+      "id": 2,
+      "picture": "https://utopiaurbana.city/wp-content/uploads/2022/02/qpx-143261111_7c33b173-770x515.jpg",
+      "name": "Milan",
+      "lastPrice": 1500,
+      "newPrice": 2100,
+      "description": "Contratalo al menor precio!"
+    },
+    {
+      "id": 3,
+      "picture": "https://estaticos.esmadrid.com/cdn/farfuture/cWEgd6nsFZn5_x7RaedKMR9rkPA7ZC3zVuc90k6gXwA/mtime:1646729215/sites/default/files/styles/content_type_full/public/editorial/estaciones.jpg?itok=8J6mUZg3",
+      "name": "Madrid",
+      "lastPrice": 2100,
+      "newPrice": 2300,
+      "description": "Contratalo al menor precio!"
+    },
+    {
+      "id": 4,
+      "picture": "https://dam.ngenespanol.com/wp-content/uploads/2019/06/Beijing-china-770x395.png",
+      "name": "Beijing",
+      "lastPrice": 2300,
+      "newPrice": 2600,
+      "description": "Contratalo al menor precio!"
+    }
+  ],
+  "cartData": [
+    {
+      "id": 2,
+      "name": "Milan",
+      "picture": "https://utopiaurbana.city/wp-content/uploads/2022/02/qpx-143261111_7c33b173-770x515.jpg",
+      "price": 1500,
+      "amount": 1
+    }
+  ]
+}

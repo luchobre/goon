@@ -1,0 +1,53 @@
+{
+    "cardsData": [
+        {
+            "icon": "./images/tele.png",
+            "title": "Discover new flavours & people",
+            "text": "Discover new tastes, flavours, snacks and recipes to make wonderful meals. Also find out where your food comes from and who makes it."
+        },
+        {
+            "icon": "./images/wholesale.png",
+            "title": "Buy wholesale",
+            "text": "We offer bulk formats, variety cases, and discovery boxes so you can save money on delicious foods by buying at wholesale prices.  "
+        },
+        {
+            "icon": "./images/support.png",
+            "title": "Support your community",
+            "text": "By buying in bulk from local and Canadian producers you are helping grow our local food ecosystem, creating jobs, and supporting families and entrepreneurs in your community."
+        },
+        {
+            "icon": "./images/winner.png",
+            "title": "Enjoy the best quality",
+            "text": "We only offer great tasting, all natural foods that are better for you, and organic if possible."
+        },
+        {
+            "icon": "./images/heart.png",
+            "title": "Enjoy Club Level Service",
+            "text": "As a member of our club, we will make sure you are delighted with our service or we will make it right!"
+        }
+    ],
+
+    "cartData": [
+        {
+            "id": 1,
+            "name": "Viaje 1",
+            "picture": "https://picsum.photos/75?random=1",
+            "price": 250,
+            "amount": 2
+        },
+        {
+            "id": 2,
+            "name": "Viaje segundo",
+            "picture": "https://picsum.photos/75?random=2",
+            "price": 500,
+            "amount": 2
+        },
+        {
+            "id": 3,
+            "name": "Tercer Viaje",
+            "picture": "https://picsum.photos/75?random=3",
+            "price": 250,
+            "amount": 3
+        }
+    ]
+}

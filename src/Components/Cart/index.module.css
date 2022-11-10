@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Poppins&family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap");
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+.modalWrapper {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.315);
+    backdrop-filter: blur(5px);
+    inset: 0;
+    font-family: "Poppins", sans-serif;
+    z-index: 10000;
+}
+
+.cartWrapper {
+    background-color: white;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    max-width: 500px;
+    width: 50vw;
+    min-width: 300px;
+    max-height: 80vh;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.219));
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.titleRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    cursor: pointer;
+}
+
+.rowWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.loader {
+    margin: 2rem 0rem;
+    align-self: center;
+}
+
+.row {
+    display: flex;
+    margin: 2rem 0rem;
+    justify-content: flex-start;
+    height: 75px;
+}
+
+.imageWrapper {
+    width: 75px;
+    height: 75px;
+    background-color: #cccccc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.details {
+    padding-left: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.remove {
+    color: #276098;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove:hover {
+    color: hsl(210, 95%, 37%);
+    text-decoration: underline;
+}
+
+.rigthColumn {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 1rem;
+}
+
+.amount {
+    margin-left: auto;
+    color: #aaaaaa;
+}
+
+.deleteWrapper {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.deleteWrapper img {
+    width: 30px;
+}
+
+.totalRow {
+    font-size: 24px;
+    border-width: 1px 0px 1px 0px;
+    border-color: rgba(0, 0, 0, 0.13);
+    border-style: solid;
+    margin: 2rem 0rem;
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkoutButton {
+    background: linear-gradient(45deg, hsl(210, 75%, 37%) 25%, hsl(270, 75%, 37%));
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    border-radius: 5px;
+    align-self: center;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.checkoutButton:hover {
+    filter: drop-shadow(0px 0px 5px black);
+
+    background: linear-gradient(45deg, hsl(210, 95%, 37%) 25%, hsl(270, 95%, 37%));
+}

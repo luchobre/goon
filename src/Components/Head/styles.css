@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.links {
+  font-family: "Poppins", sans-serif;
+  margin: 6%;
+  /* border: 2px solid #276098; */
+  border-radius: 5px;
+}
+
+.links:hover {
+  background-color: #276098;
+  color: white;
+  padding: 8px;
+}
+
+.containerNavbar {
+  /* border: 2px solid black; */
+  background-image: linear-gradient(
+    to right top,
+    #276098,
+    #356ca2,
+    #4378ab,
+    #5085b5,
+    #5e91be,
+    #749cc6,
+    #88a8cd,
+    #9bb4d5,
+    #b5c2dc,
+    #ccd1e3,
+    #e1e1ea,
+    #f2f2f2
+  );
+
+}

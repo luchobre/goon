@@ -1,0 +1,63 @@
+.tell-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-image: radial-gradient(
+        circle,
+        #ffffff,
+        #ebebf5,
+        #d4d9eb,
+        #bbc7e2,
+        #9eb7d8,
+        #8aaacf,
+        #759dc7,
+        #5e91be,
+        #5085b5,
+        #4378ab,
+        #356ca2,
+        #276098
+    );
+}
+.tell-title {
+    font-family: "Cormorant", serif;
+    font-size: 40px;
+}
+
+.tell-socialNetworks-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tell-socialNetworks {
+    height: 60px;
+    width: 60px;
+    display: flex;
+}
+
+@media screen and (max-width: 490px) {
+    .tell-socialNetworks {
+        height: 40px;
+        width: 40px;
+    }
+
+    .tell-title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .tell-socialNetworks {
+        height: 20px;
+        width: 20px;
+    }
+
+    .tell-title {
+        font-size: 20px;
+    }
+}

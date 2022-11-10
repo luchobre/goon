@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Poppins&family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap");
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cormorant", serif;
+    font-weight: 700;
+    color: #1f1f1f;
+    padding: 4rem;
+    gap: 2rem;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+}
+h3,
+h2 {
+    color: #1f1f1f;
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+.titleAccent {
+    color: #276098;
+    background-image: linear-gradient(45deg, hsl(210, 75%, 37%) 25%, hsl(270, 75%, 37%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.itemContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+}
+
+.tick {
+    background: linear-gradient(45deg, hsl(210, 75%, 37%) 25%, hsl(270, 75%, 37%));
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 1000vh;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemText {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin: 0; /* fix por algún estilo global*/
+}
+
+.button {
+    background: linear-gradient(45deg, hsl(210, 75%, 37%) 25%, hsl(270, 75%, 37%));
+
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    border-radius: 5px;
+    align-self: center;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button:hover {
+    filter: drop-shadow(0px 0px 5px black);
+
+    background: linear-gradient(45deg, hsl(210, 95%, 37%) 25%, hsl(270, 95%, 37%));
+}
+
+.pictureWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        padding: 2rem;
+    }
+    .title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
