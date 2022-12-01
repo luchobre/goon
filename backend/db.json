@@ -60,13 +60,5 @@
       "description": "Contratalo al menor precio!"
     }
   ],
-  "cartData": [
-    {
-      "id": 3,
-      "name": "Madrid",
-      "picture": "https://estaticos.esmadrid.com/cdn/farfuture/cWEgd6nsFZn5_x7RaedKMR9rkPA7ZC3zVuc90k6gXwA/mtime:1646729215/sites/default/files/styles/content_type_full/public/editorial/estaciones.jpg?itok=8J6mUZg3",
-      "price": 2100,
-      "amount": 2
-    }
-  ]
+  "cartData": []
 }
